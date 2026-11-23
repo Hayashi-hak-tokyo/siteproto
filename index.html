@@ -66,22 +66,35 @@
     <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" id="header-logo">
                     <span class="text-corporate-blue font-black text-3xl tracking-tighter">EPSON</span>
                     <span class="ml-3 text-gray-500 font-medium text-sm hidden sm:block border-l border-gray-300 pl-3">Inkjet Solution</span>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors">製品情報</a>
-                    <a href="#" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors">テクノロジー</a>
-                    <a href="#" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors">サポート</a>
-                    <a href="#" class="bg-corporate-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                        お問い合わせ
-                    </a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                <div class="flex items-center space-x-4 md:space-x-8">
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="#" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors" data-i18n="nav_products">製品情報</a>
+                        <a href="#technology" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors" data-i18n="nav_technology">テクノロジー</a>
+                        <a href="#" class="text-gray-600 hover:text-corporate-blue font-medium transition-colors" data-i18n="nav_support">サポート</a>
+                        <a href="#" class="bg-corporate-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5" data-i18n="nav_contact">
+                            お問い合わせ
+                        </a>
+                    </div>
+
+                    <!-- Language Switcher (JP / EN) -->
+                    <div class="flex items-center bg-gray-100 rounded-full p-1 border border-gray-200" role="group" aria-label="Language switcher">
+                        <button type="button" id="lang-ja-btn" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-corporate-blue text-white shadow-sm">
+                            JP
+                        </button>
+                        <button type="button" id="lang-en-btn" class="px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-600 hover:text-corporate-blue">
+                            EN
+                        </button>
+                    </div>
+
+                    <div class="md:hidden flex items-center">
+                        <button class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,11 +110,11 @@
             <p class="text-blue-300 font-bold tracking-widest uppercase mb-6 text-sm md:text-base drop-shadow-md">
                 Industrial Inkjet Innovation
             </p>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-10 leading-tight text-white tracking-tight drop-shadow-lg">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-10 leading-tight text-white tracking-tight drop-shadow-lg" data-i18n-html="hero_title">
                 技術を前に進めてきたのは、<br>
                 お客さまの難題でした。<br class="hidden md:block">
             </h1>
-            <p class="text-base md:text-lg text-gray-100 leading-loose font-medium drop-shadow-md">
+            <p class="text-base md:text-lg text-gray-100 leading-loose font-medium drop-shadow-md" data-i18n-html="hero_body">
                 もっと細かく、もっと多種多様に。<br>
                 お客さまの期待に応えるため、エプソンの技術者は、ひたすらに技術を磨きつづけてきました。<br>
                 試して、測って、条件を変えて、また試す。<br>
@@ -120,8 +133,8 @@
                 産業用プリントヘッド技術が、あらゆる印刷プロセスを革新します。
             </p>
             <div class="mt-8">
-                <a href="https://corporate.epson/ja/philosophy/vision/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white font-bold text-lg hover:text-blue-200 transition-colors drop-shadow-md border border-white/30 rounded-full px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm">
-                    <i class="fas fa-play mr-2 text-sm"></i> 経営のコミット
+                <a id="vision-link" href="https://corporate.epson/ja/philosophy/vision/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white font-bold text-lg hover:text-blue-200 transition-colors drop-shadow-md border border-white/30 rounded-full px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+                    <i class="fas fa-play mr-2 text-sm"></i> <span data-i18n="hero_vision_btn">経営のコミット</span>
                 </a>
             </div>
         </div>
@@ -132,16 +145,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-row justify-start lg:justify-center space-x-6 md:space-x-10 overflow-x-auto whitespace-nowrap py-4 scrollbar-hide">
                 <a href="#technology" class="text-gray-700 hover:text-corporate-blue text-sm md:text-base font-bold flex items-center gap-2 transition-colors">
-                    <i class="fas fa-microchip text-corporate-blue"></i> EPSONの技術
+                    <i class="fas fa-microchip text-corporate-blue"></i> <span data-i18n="fnav_tech">EPSONの技術</span>
                 </a>
                 <a href="#solutions" class="text-gray-700 hover:text-corporate-blue text-sm md:text-base font-bold flex items-center gap-2 transition-colors">
-                    <i class="fas fa-check-circle text-corporate-blue"></i> 最適解
+                    <i class="fas fa-check-circle text-corporate-blue"></i> <span data-i18n="fnav_solutions">最適解</span>
                 </a>
                 <a href="#engineers" class="text-gray-700 hover:text-corporate-blue text-sm md:text-base font-bold flex items-center gap-2 transition-colors">
-                    <i class="fas fa-users text-corporate-blue"></i> 技術者
+                    <i class="fas fa-users text-corporate-blue"></i> <span data-i18n="fnav_engineers">技術者</span>
                 </a>
                 <a href="#resources" class="text-gray-700 hover:text-corporate-blue text-sm md:text-base font-bold flex items-center gap-2 transition-colors">
-                    <i class="fas fa-folder-open text-corporate-blue"></i> 関連リソース
+                    <i class="fas fa-folder-open text-corporate-blue"></i> <span data-i18n="fnav_resources">関連リソース</span>
                 </a>
             </div>
         </div>
@@ -151,7 +164,7 @@
     <section id="map" class="py-24 bg-white scroll-mt-32">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="reveal">
-                <h2 class="text-3xl font-bold mb-12 text-gray-900">技術の全体像</h2>
+                <h2 class="text-3xl font-bold mb-12 text-gray-900" data-i18n="map_title">技術の全体像</h2>
                 <!-- 提供されたSVG画像の配置 -->
                 <img src="https://www.epson.jp/products/inkjet/images/about_img.svg" alt="技術マップ" class="w-full h-auto mx-auto max-w-3xl drop-shadow-sm">
             </div>
@@ -163,8 +176,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <p class="text-corporate-blue font-bold tracking-wider text-sm mb-2">TECHNOLOGY</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">EPSONの技術</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">お客さまの課題から紐解く、エプソンの解決力</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900" data-i18n="tech_title">EPSONの技術</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="tech_subtitle">お客さまの課題から紐解く、エプソンの解決力</p>
                 <div class="w-12 h-1 bg-corporate-blue mx-auto mt-6"></div>
             </div>
 
@@ -176,7 +189,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">微細なパターニングを、歩留まり良く印刷したい</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_1_challenge">微細なパターニングを、歩留まり良く印刷したい</p>
                             </div>
                         </div>
                     </div>
@@ -185,9 +198,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-tint"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">高精度インク吐出制御</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_1_title">高精度インク吐出制御</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">ピエゾ技術を用いた微細なコントロールにより、1ピコリットル単位の極めて正確な着弾を実現。不良率を劇的に下げ、高品質な生産を可能にします。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_1_desc">ピエゾ技術を用いた微細なコントロールにより、1ピコリットル単位の極めて正確な着弾を実現。不良率を劇的に下げ、高品質な生産を可能にします。</p>
                     </div>
                 </div>
 
@@ -198,7 +211,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">製造工程の環境負荷（CO2・廃液）を下げたい</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_2_challenge">製造工程の環境負荷（CO2・廃液）を下げたい</p>
                             </div>
                         </div>
                     </div>
@@ -207,9 +220,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-leaf"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">環境負荷低減プロセス</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_2_title">環境負荷低減プロセス</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">熱を使わないプロセスとオンデマンドな液滴吐出により、無駄な資源消費と廃液を大幅に削減。サステナブルな製造ラインの構築に貢献します。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_2_desc">熱を使わないプロセスとオンデマンドな液滴吐出により、無駄な資源消費と廃液を大幅に削減。サステナブルな製造ラインの構築に貢献します。</p>
                     </div>
                 </div>
 
@@ -220,7 +233,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">特殊な機能性インク（高粘度・溶剤など）を使いたい</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_3_challenge">特殊な機能性インク（高粘度・溶剤など）を使いたい</p>
                             </div>
                         </div>
                     </div>
@@ -229,9 +242,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-layer-group"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">多様な液剤対応力</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_3_title">多様な液剤対応力</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">水性、UV、溶剤など幅広いインクへの適合性を持ち、半導体材料やバイオ液剤など、印刷領域を超えた特殊液剤の吐出にも対応します。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_3_desc">水性、UV、溶剤など幅広いインクへの適合性を持ち、半導体材料やバイオ液剤など、印刷領域を超えた特殊液剤の吐出にも対応します。</p>
                     </div>
                 </div>
 
@@ -242,7 +255,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">産業ラインのスピードとタフな連続稼働に耐えられない</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_4_challenge">産業ラインのスピードとタフな連続稼働に耐えられない</p>
                             </div>
                         </div>
                     </div>
@@ -251,9 +264,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-tachometer-alt"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">高速・高耐久ヘッド</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_4_title">高速・高耐久ヘッド</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">熱によるヘッドへのダメージがないため劣化が少なく、24時間稼働の過酷な産業用途に耐えうる圧倒的な耐久性と印刷速度を誇ります。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_4_desc">熱によるヘッドへのダメージがないため劣化が少なく、24時間稼働の過酷な産業用途に耐えうる圧倒的な耐久性と印刷速度を誇ります。</p>
                     </div>
                 </div>
 
@@ -264,7 +277,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">限られたスペースの既存設備にインクジェットを組み込みたい</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_5_challenge">限られたスペースの既存設備にインクジェットを組み込みたい</p>
                             </div>
                         </div>
                     </div>
@@ -273,9 +286,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-compress-arrows-alt"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">コンパクト設計</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_5_title">コンパクト設計</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">装置への組み込みやすさを徹底的に追求。ヘッド自体が小型でモジュール化されているため、限られたスペースにも柔軟にレイアウトできます。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_5_desc">装置への組み込みやすさを徹底的に追求。ヘッド自体が小型でモジュール化されているため、限られたスペースにも柔軟にレイアウトできます。</p>
                     </div>
                 </div>
 
@@ -286,7 +299,7 @@
                             <i class="fas fa-comment-dots text-corporate-blue text-xl mt-0.5"></i>
                             <div>
                                 <p class="text-xs text-corporate-blue font-bold mb-1 tracking-wider uppercase">Challenge</p>
-                                <p class="text-gray-800 font-bold text-sm leading-snug">自社だけでシステム構築を行うノウハウがない</p>
+                                <p class="text-gray-800 font-bold text-sm leading-snug" data-i18n="tech_6_challenge">自社だけでシステム構築を行うノウハウがない</p>
                             </div>
                         </div>
                     </div>
@@ -295,9 +308,9 @@
                             <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
                                 <i class="fas fa-cogs"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900">システムインテグレーション</h3>
+                            <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_6_title">システムインテグレーション</h3>
                         </div>
-                        <p class="text-gray-600 text-sm leading-relaxed flex-grow">お客さまの生産ラインに合わせた柔軟なシステム構築をサポート。プリントヘッドの提供だけでなく、最適な吐出条件出しまで伴走します。</p>
+                        <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_6_desc">お客さまの生産ラインに合わせた柔軟なシステム構築をサポート。プリントヘッドの提供だけでなく、最適な吐出条件出しまで伴走します。</p>
                     </div>
                 </div>
             </div>
@@ -309,8 +322,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <p class="text-corporate-blue font-bold tracking-wider text-sm mb-2">SOLUTIONS</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">最適解</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">技術のアウトカム</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900" data-i18n="sol_title">最適解</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="sol_subtitle">技術のアウトカム</p>
                 <div class="w-12 h-1 bg-corporate-blue mx-auto mt-6"></div>
             </div>
 
@@ -320,8 +333,8 @@
                         <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="最適解1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 bg-white flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">生産プロセスのデジタル化</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">エプソンの「PrecisionCore」プリントヘッドを中核とするインクジェット技術により、従来のアナログな印刷や製造工程をデジタル化。版を必要としないため、多品種小ロットや短納期生産に柔軟に対応し、在庫レス・廃棄ロス削減などサプライチェーン全体の効率化に貢献します。</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="sol_1_title">生産プロセスのデジタル化</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="sol_1_desc">エプソンの「PrecisionCore」プリントヘッドを中核とするインクジェット技術により、従来のアナログな印刷や製造工程をデジタル化。版を必要としないため、多品種小ロットや短納期生産に柔軟に対応し、在庫レス・廃棄ロス削減などサプライチェーン全体の効率化に貢献します。</p>
                     </div>
                 </div>
                 <div class="reveal delay-100 flex flex-col h-full border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group">
@@ -329,8 +342,8 @@
                         <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="最適解2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 bg-white flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">サステナブルなモノづくり</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">エプソン独自の「Heat-Free Technology（熱を使わないインク吐出）」により、圧倒的な低消費電力とCO₂排出量削減を実現。また、必要な場所に必要な量だけ液剤を塗布する非接触プロセスにより、資源の無駄や廃液を極小化し、環境ビジョンに直結する環境負荷と経済性の両立を果たします。</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="sol_2_title">サステナブルなモノづくり</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="sol_2_desc">エプソン独自の「Heat-Free Technology（熱を使わないインク吐出）」により、圧倒的な低消費電力とCO₂排出量削減を実現。また、必要な場所に必要な量だけ液剤を塗布する非接触プロセスにより、資源の無駄や廃液を極小化し、環境ビジョンに直結する環境負荷と経済性の両立を果たします。</p>
                     </div>
                 </div>
                 <div class="reveal delay-200 flex flex-col h-full border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group">
@@ -338,8 +351,8 @@
                         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="最適解3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 bg-white flex-grow">
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">新規アプリケーション開拓</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">多種多様な液剤を高精度に吐出できる強みを生かし、紙やテキスタイルへの印刷を超えた新たな産業領域を創出。フラットパネルディスプレイの製造、半導体・電子デバイスの微細配線、さらにはバイオプリンティング領域など、次世代の製造プロセスを「インクジェット」の概念で革新します。</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="sol_3_title">新規アプリケーション開拓</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="sol_3_desc">多種多様な液剤を高精度に吐出できる強みを生かし、紙やテキスタイルへの印刷を超えた新たな産業領域を創出。フラットパネルディスプレイの製造、半導体・電子デバイスの微細配線、さらにはバイオプリンティング領域など、次世代の製造プロセスを「インクジェット」の概念で革新します。</p>
                     </div>
                 </div>
             </div>
@@ -351,7 +364,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <p class="text-corporate-blue font-bold tracking-wider text-sm mb-2">OUR EXPERTS</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">信頼できる技術者</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900" data-i18n="eng_title">信頼できる技術者</h2>
                 <div class="w-12 h-1 bg-corporate-blue mx-auto mt-6"></div>
             </div>
 
@@ -360,31 +373,31 @@
                 <div id="yamada-card" class="reveal group bg-white p-6 rounded-2xl shadow-sm text-center cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ring-2 ring-transparent hover:ring-corporate-blue">
                     <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="山田 太郎" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-50">
                     <h3 class="text-lg font-bold text-gray-900 mb-1 flex items-center justify-center gap-1">
-                        山田 太郎 <i class="fas fa-chevron-right text-corporate-blue text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        <span data-i18n="eng_1_name">山田 太郎</span> <i class="fas fa-chevron-right text-corporate-blue text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
                     </h3>
-                    <p class="text-xs text-corporate-blue font-bold mb-3">プリントヘッド開発部</p>
-                    <p class="text-gray-500 text-sm">流体力学の専門家として、インク吐出の極限の精度を追求しています。</p>
+                    <p class="text-xs text-corporate-blue font-bold mb-3" data-i18n="eng_1_dept">プリントヘッド開発部</p>
+                    <p class="text-gray-500 text-sm" data-i18n="eng_1_desc">流体力学の専門家として、インク吐出の極限の精度を追求しています。</p>
                 </div>
                 <!-- Engineer 2 -->
                 <div class="reveal delay-100 bg-white p-6 rounded-2xl shadow-sm text-center">
                     <img src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="佐藤 理恵" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-50">
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">佐藤 理恵</h3>
-                    <p class="text-xs text-corporate-blue font-bold mb-3">マテリアルサイエンス部門</p>
-                    <p class="text-gray-500 text-sm">様々な産業用インクとヘッドの適合性を検証する材料開発のプロフェッショナル。</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="eng_2_name">佐藤 理恵</h3>
+                    <p class="text-xs text-corporate-blue font-bold mb-3" data-i18n="eng_2_dept">マテリアルサイエンス部門</p>
+                    <p class="text-gray-500 text-sm" data-i18n="eng_2_desc">様々な産業用インクとヘッドの適合性を検証する材料開発のプロフェッショナル。</p>
                 </div>
                 <!-- Engineer 3 -->
                 <div class="reveal delay-200 bg-white p-6 rounded-2xl shadow-sm text-center">
                     <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="鈴木 健一" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-50">
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">鈴木 健一</h3>
-                    <p class="text-xs text-corporate-blue font-bold mb-3">システムインテグレーション</p>
-                    <p class="text-gray-500 text-sm">お客様の既存ラインにいかにスムーズにヘッドを組み込むかを設計します。</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="eng_3_name">鈴木 健一</h3>
+                    <p class="text-xs text-corporate-blue font-bold mb-3" data-i18n="eng_3_dept">システムインテグレーション</p>
+                    <p class="text-gray-500 text-sm" data-i18n="eng_3_desc">お客様の既存ラインにいかにスムーズにヘッドを組み込むかを設計します。</p>
                 </div>
                 <!-- Engineer 4 -->
                 <div class="reveal delay-300 bg-white p-6 rounded-2xl shadow-sm text-center">
                     <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="田中 美咲" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gray-50">
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">田中 美咲</h3>
-                    <p class="text-xs text-corporate-blue font-bold mb-3">品質保証部</p>
-                    <p class="text-gray-500 text-sm">過酷な産業環境でも安定稼働するための厳しい耐久テストを統括。</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1" data-i18n="eng_4_name">田中 美咲</h3>
+                    <p class="text-xs text-corporate-blue font-bold mb-3" data-i18n="eng_4_dept">品質保証部</p>
+                    <p class="text-gray-500 text-sm" data-i18n="eng_4_desc">過酷な産業環境でも安定稼働するための厳しい耐久テストを統括。</p>
                 </div>
             </div>
         </div>
@@ -394,8 +407,8 @@
     <section id="resources" class="py-24 bg-gray-100 border-t border-gray-200 scroll-mt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">関連情報・リソース</h2>
-                <p class="text-gray-500">各種資料や事例、最新情報はこちらからご覧いただけます。</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900" data-i18n="res_title">関連情報・リソース</h2>
+                <p class="text-gray-500" data-i18n="res_subtitle">各種資料や事例、最新情報はこちらからご覧いただけます。</p>
                 <div class="w-12 h-1 bg-corporate-blue mx-auto mt-6"></div>
             </div>
 
@@ -406,48 +419,48 @@
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-file-pdf"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">ホワイトペーパー</h3>
-                    <p class="text-gray-500 text-sm">インクジェット技術の深い理解と、業界ごとの課題解決に関する専門資料。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_1_title">ホワイトペーパー</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_1_desc">インクジェット技術の深い理解と、業界ごとの課題解決に関する専門資料。</p>
                 </a>
 
                 <a href="#" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal group border border-gray-200 flex flex-col items-center text-center hover:-translate-y-2" style="transition-delay: 100ms;">
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">カタログ</h3>
-                    <p class="text-gray-500 text-sm">最新の産業用プリントヘッドや関連製品のスペック・詳細仕様情報。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_2_title">カタログ</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_2_desc">最新の産業用プリントヘッドや関連製品のスペック・詳細仕様情報。</p>
                 </a>
 
                 <a href="#" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal group border border-gray-200 flex flex-col items-center text-center hover:-translate-y-2" style="transition-delay: 200ms;">
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-newspaper"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">News</h3>
-                    <p class="text-gray-500 text-sm">エプソンのインクジェットソリューションに関する最新ニュース・展示会情報。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_3_title">News</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_3_desc">エプソンのインクジェットソリューションに関する最新ニュース・展示会情報。</p>
                 </a>
 
                 <a href="#" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal group border border-gray-200 flex flex-col items-center text-center hover:-translate-y-2">
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">注力技術・投資領域</h3>
-                    <p class="text-gray-500 text-sm">次世代の産業革新を見据えた、当社のインクジェット研究開発の重点領域や投資方針。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_4_title">注力技術・投資領域</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_4_desc">次世代の産業革新を見据えた、当社のインクジェット研究開発の重点領域や投資方針。</p>
                 </a>
 
                 <a href="#" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal group border border-gray-200 flex flex-col items-center text-center hover:-translate-y-2" style="transition-delay: 100ms;">
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-microphone-alt"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">登壇・寄稿アーカイブ</h3>
-                    <p class="text-gray-500 text-sm">当社技術者が登壇した展示会・カンファレンスや、専門誌への寄稿記事などの記録。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_5_title">登壇・寄稿アーカイブ</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_5_desc">当社技術者が登壇した展示会・カンファレンスや、専門誌への寄稿記事などの記録。</p>
                 </a>
 
                 <a href="#" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 reveal group border border-gray-200 flex flex-col items-center text-center hover:-translate-y-2" style="transition-delay: 200ms;">
                     <div class="w-16 h-16 bg-blue-50 text-corporate-blue rounded-full flex items-center justify-center mb-6 text-2xl group-hover:bg-corporate-blue group-hover:text-white transition-colors">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">論文</h3>
-                    <p class="text-gray-500 text-sm">研究開発に基づく、学術的な技術論文や研究発表のアーカイブ。</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900" data-i18n="res_6_title">論文</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="res_6_desc">研究開発に基づく、学術的な技術論文や研究発表のアーカイブ。</p>
                 </a>
 
             </div>
@@ -460,7 +473,7 @@
     <div id="detail-view" class="hidden pt-32 pb-32 min-h-screen bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <button id="back-btn" class="mb-8 text-gray-500 hover:text-corporate-blue font-bold flex items-center transition-colors bg-white px-5 py-2.5 rounded-full shadow-sm hover:shadow w-max">
-                <i class="fas fa-arrow-left mr-2"></i> 前のページへ戻る
+                <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="btn_back">前のページへ戻る</span>
             </button>
             <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
                 <div class="md:flex">
@@ -469,15 +482,15 @@
                     </div>
                     <div class="p-8 md:p-12 flex flex-col justify-center">
                         <div class="uppercase tracking-widest text-xs text-corporate-blue font-bold mb-3">PROJECT STORY</div>
-                        <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-8">極限の精度を求めて：<br>次世代ピエゾヘッド開発の軌跡</h2>
+                        <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-8" data-i18n-html="detail_title">極限の精度を求めて：<br>次世代ピエゾヘッド開発の軌跡</h2>
                         <div class="mb-8 flex items-center border-b border-gray-100 pb-6">
-                            <span class="font-bold text-gray-900 mr-4 text-lg">山田 太郎</span>
-                            <span class="text-xs bg-blue-50 text-corporate-blue px-3 py-1.5 rounded-full font-bold">プリントヘッド開発部</span>
+                            <span class="font-bold text-gray-900 mr-4 text-lg" data-i18n="eng_1_name">山田 太郎</span>
+                            <span class="text-xs bg-blue-50 text-corporate-blue px-3 py-1.5 rounded-full font-bold" data-i18n="eng_1_dept">プリントヘッド開発部</span>
                         </div>
-                        <p class="text-gray-600 leading-loose mb-6">
+                        <p class="text-gray-600 leading-loose mb-6" data-i18n="detail_p1">
                             私たちが挑んだのは、従来のインクジェットの常識を覆す「超高精細」と「高速印刷」の両立でした。流体力学の観点からインクの挙動を徹底的にシミュレーションし、ピエゾ素子の微細な振動制御を最適化することで、1ピコリットル単位の極めて正確な着弾を実現しました。
                         </p>
-                        <p class="text-gray-600 leading-loose">
+                        <p class="text-gray-600 leading-loose" data-i18n="detail_p2">
                             特に困難だったのは、異なる粘度の産業用インクを同一のヘッドで安定して長期間吐出させることです。数え切れないほどの試作と過酷な環境テストを繰り返し、ついにあらゆる産業ニーズに応える当社独自の吐出制御アルゴリズムを完成させました。この技術が、お客様のモノづくりを根底から変えると確信しています。
                         </p>
                     </div>
@@ -490,7 +503,7 @@
     <div id="whitepaper-view" class="hidden pt-32 pb-32 min-h-screen bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <button id="wp-back-btn" class="mb-8 text-gray-500 hover:text-corporate-blue font-bold flex items-center transition-colors bg-white px-5 py-2.5 rounded-full shadow-sm hover:shadow w-max cursor-pointer">
-                <i class="fas fa-arrow-left mr-2"></i> 前のページへ戻る
+                <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="btn_back">前のページへ戻る</span>
             </button>
             <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                 <!-- 左側：資料説明 -->
@@ -500,80 +513,80 @@
                         <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 text-3xl">
                             <i class="fas fa-file-pdf"></i>
                         </div>
-                        <h2 class="text-2xl md:text-3xl font-black leading-tight mb-6">最新ホワイトペーパー<br>無料ダウンロード</h2>
-                        <p class="text-blue-100 leading-relaxed mb-6 text-sm">
+                        <h2 class="text-2xl md:text-3xl font-black leading-tight mb-6" data-i18n-html="wp_title">最新ホワイトペーパー<br>無料ダウンロード</h2>
+                        <p class="text-blue-100 leading-relaxed mb-6 text-sm" data-i18n="wp_desc">
                             エプソンのインクジェット技術が拓く、最先端アプリケーションに関する技術資料をご用意しています。ご希望の資料を選択してダウンロードしてください。
                         </p>
                         
                         <div class="space-y-4">
                             <!-- ペーパー1: バイオ -->
                             <div class="bg-white/10 p-4 rounded-lg border border-white/20">
-                                <h4 class="font-bold text-white mb-1"><i class="fas fa-microscope text-blue-300 mr-2"></i>バイオプリンティングの最前線</h4>
-                                <p class="text-xs text-blue-100">細胞を含むバイオインクの高生存率を維持する微細液滴制御と、再生医療・創薬への応用。</p>
+                                <h4 class="font-bold text-white mb-1"><i class="fas fa-microscope text-blue-300 mr-2"></i><span data-i18n="wp_1_title">バイオプリンティングの最前線</span></h4>
+                                <p class="text-xs text-blue-100" data-i18n="wp_1_desc">細胞を含むバイオインクの高生存率を維持する微細液滴制御と、再生医療・創薬への応用。</p>
                             </div>
                             <!-- ペーパー2: エレクトロニクス -->
                             <div class="bg-white/10 p-4 rounded-lg border border-white/20">
-                                <h4 class="font-bold text-white mb-1"><i class="fas fa-microchip text-blue-300 mr-2"></i>プリンテッドエレクトロニクス</h4>
-                                <p class="text-xs text-blue-100">高粘度な導電性インクの安定吐出メカニズムと、次世代フレキシブルデバイス製造の歩留まり向上。</p>
+                                <h4 class="font-bold text-white mb-1"><i class="fas fa-microchip text-blue-300 mr-2"></i><span data-i18n="wp_2_title">プリンテッドエレクトロニクス</span></h4>
+                                <p class="text-xs text-blue-100" data-i18n="wp_2_desc">高粘度な導電性インクの安定吐出メカニズムと、次世代フレキシブルデバイス製造の歩留まり向上。</p>
                             </div>
                             <!-- ペーパー3: 立体物 -->
                             <div class="bg-white/10 p-4 rounded-lg border border-white/20">
-                                <h4 class="font-bold text-white mb-1"><i class="fas fa-cube text-blue-300 mr-2"></i>3D曲面ダイレクトプリント</h4>
-                                <p class="text-xs text-blue-100">産業用ロボットとの高度な同期制御による、複雑な立体物への高精細オンデマンド印刷技術。</p>
+                                <h4 class="font-bold text-white mb-1"><i class="fas fa-cube text-blue-300 mr-2"></i><span data-i18n="wp_3_title">3D曲面ダイレクトプリント</span></h4>
+                                <p class="text-xs text-blue-100" data-i18n="wp_3_desc">産業用ロボットとの高度な同期制御による、複雑な立体物への高精細オンデマンド印刷技術。</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- 右側：入力フォーム -->
                 <div class="md:w-1/2 p-8 md:p-12">
-                    <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4">ダウンロードフォーム</h3>
-                    <form class="space-y-5" onsubmit="event.preventDefault(); const btn=this.querySelector('button[type=submit]'); btn.innerHTML='<i class=\'fas fa-check\'></i> 送信されました'; btn.classList.replace('bg-corporate-blue','bg-green-600'); btn.classList.replace('hover:bg-blue-800','hover:bg-green-700'); btn.disabled=true;">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4" data-i18n="wp_form_title">ダウンロードフォーム</h3>
+                    <form id="wp-form" class="space-y-5">
                         
                         <!-- 資料選択 -->
                         <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
-                            <label class="block text-sm font-bold text-gray-700 mb-3">ご希望の資料（複数選択可） <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-bold text-gray-700 mb-3"><span data-i18n="wp_form_select">ご希望の資料（複数選択可）</span> <span class="text-red-500">*</span></label>
                             <div class="space-y-2">
                                 <label class="flex items-start gap-2 text-sm text-gray-700 cursor-pointer">
                                     <input type="checkbox" class="mt-1 w-4 h-4 text-corporate-blue border-gray-300 rounded focus:ring-corporate-blue" checked>
-                                    <span class="font-medium">バイオプリンティングの最前線</span>
+                                    <span class="font-medium" data-i18n="wp_1_title">バイオプリンティングの最前線</span>
                                 </label>
                                 <label class="flex items-start gap-2 text-sm text-gray-700 cursor-pointer">
                                     <input type="checkbox" class="mt-1 w-4 h-4 text-corporate-blue border-gray-300 rounded focus:ring-corporate-blue">
-                                    <span class="font-medium">プリンテッドエレクトロニクス</span>
+                                    <span class="font-medium" data-i18n="wp_2_title">プリンテッドエレクトロニクス</span>
                                 </label>
                                 <label class="flex items-start gap-2 text-sm text-gray-700 cursor-pointer">
                                     <input type="checkbox" class="mt-1 w-4 h-4 text-corporate-blue border-gray-300 rounded focus:ring-corporate-blue">
-                                    <span class="font-medium">3D曲面ダイレクトプリント</span>
+                                    <span class="font-medium" data-i18n="wp_3_title">3D曲面ダイレクトプリント</span>
                                 </label>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">会社名 <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-bold text-gray-700 mb-1"><span data-i18n="wp_form_company">会社名</span> <span class="text-red-500">*</span></label>
                             <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corporate-blue focus:border-corporate-blue outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">部署名</label>
+                            <label class="block text-sm font-bold text-gray-700 mb-1" data-i18n="wp_form_dept">部署名</label>
                             <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corporate-blue focus:border-corporate-blue outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">氏名 <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-bold text-gray-700 mb-1"><span data-i18n="wp_form_name">氏名</span> <span class="text-red-500">*</span></label>
                             <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corporate-blue focus:border-corporate-blue outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">メールアドレス（会社） <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-bold text-gray-700 mb-1"><span data-i18n="wp_form_email">メールアドレス（会社）</span> <span class="text-red-500">*</span></label>
                             <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corporate-blue focus:border-corporate-blue outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">電話番号 <span class="text-red-500">*</span></label>
+                            <label class="block text-sm font-bold text-gray-700 mb-1"><span data-i18n="wp_form_phone">電話番号</span> <span class="text-red-500">*</span></label>
                             <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-corporate-blue focus:border-corporate-blue outline-none transition-all">
                         </div>
                         <div class="pt-4">
-                            <button type="submit" class="w-full bg-corporate-blue text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-800 transition-colors shadow-md flex items-center justify-center gap-2">
-                                <i class="fas fa-download"></i> 資料をダウンロードする
+                            <button type="submit" id="wp-submit-btn" class="w-full bg-corporate-blue text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-800 transition-colors shadow-md flex items-center justify-center gap-2">
+                                <i class="fas fa-download"></i> <span data-i18n="wp_form_submit">資料をダウンロードする</span>
                             </button>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4 leading-relaxed">
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed" data-i18n="wp_form_privacy">
                             ご入力いただいた情報は、当社のプライバシーポリシーに従い厳重に管理し、製品・サービスに関する情報提供に利用させていただきます。
                         </p>
                     </form>
@@ -588,33 +601,33 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-2">
                     <span class="text-white font-black text-2xl tracking-tighter mb-4 block">EPSON</span>
-                    <p class="text-sm leading-relaxed mb-6 max-w-sm">
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm" data-i18n="footer_about">
                         エプソンは、独自のマイクロピエゾ技術を活用し、産業向けインクジェットソリューションを通じて、社会の課題解決と持続可能な発展に貢献します。
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">ソリューション</h4>
+                    <h4 class="text-white font-bold mb-4" data-i18n="footer_sol_title">ソリューション</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">プリントヘッド</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">インク・液剤</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">導入サポート</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_sol_1">プリントヘッド</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_sol_2">インク・液剤</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_sol_3">導入サポート</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">企業情報</h4>
+                    <h4 class="text-white font-bold mb-4" data-i18n="footer_corp_title">企業情報</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">会社概要</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">サステナビリティ</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">採用情報</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_corp_1">会社概要</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_corp_2">サステナビリティ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-i18n="footer_corp_3">採用情報</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
                 <div class="mb-4 md:mb-0 space-x-4">
-                    <a href="#" class="hover:text-white transition-colors">ご利用条件</a>
-                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
-                    <a href="#" class="hover:text-white transition-colors">サイトマップ</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">ご利用条件</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition-colors" data-i18n="footer_sitemap">サイトマップ</a>
                 </div>
                 <p>&copy; 2026 Dummy Inkjet Solution Corp. All Rights Reserved.</p>
             </div>
@@ -624,7 +637,296 @@
     <!-- Interactive Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ==========================================
+            // Multi-language Dictionary (JP / EN)
+            // ==========================================
+            const translations = {
+                ja: {
+                    nav_products: '製品情報',
+                    nav_technology: 'テクノロジー',
+                    nav_support: 'サポート',
+                    nav_contact: 'お問い合わせ',
+                    hero_title: '技術を前に進めてきたのは、<br>お客さまの難題でした。<br class="hidden md:block">',
+                    hero_body: `もっと細かく、もっと多種多様に。<br>
+                        お客さまの期待に応えるため、エプソンの技術者は、ひたすらに技術を磨きつづけてきました。<br>
+                        試して、測って、条件を変えて、また試す。<br>
+                        そうしてエプソンのインクジェットは、ごく小さな一滴を、狙った場所へ、<br>
+                        高速で届けられる技術に進化を遂げました。<br>
+                        いま、その精度を必要としているのは、印刷の市場だけではありません。<br>
+                        半導体や次世代の太陽電池をつくる現場でも、インクジェットの技術が求められています。<br>
+                        <br>
+                        今、エプソンは印刷業を超え、新たなステージへ。<br>
+                        これまでと代わらず、お客さまの「つくりたい」に、誠実に向き合い、<br>
+                        挑戦を繰り返し、最後までやりとげる。<br>
+                        そこで磨いた技術が、また次の産業の難題を解く力になる。<br>
+                        この積み重ねで、私たちはエプソンの次の事業を育てていきます。<br>
+                        お客さまの期待に、技術で応えつづける。<br>
+                        それが、ENGINEERED FUTURE 2035に向けた、私たちの仕事です。<br>
+                        産業用プリントヘッド技術が、あらゆる印刷プロセスを革新します。`,
+                    hero_vision_btn: '経営のコミット',
+                    fnav_tech: 'EPSONの技術',
+                    fnav_solutions: '最適解',
+                    fnav_engineers: '技術者',
+                    fnav_resources: '関連リソース',
+                    map_title: '技術の全体像',
+                    tech_title: 'EPSONの技術',
+                    tech_subtitle: 'お客さまの課題から紐解く、エプソンの解決力',
+                    tech_1_challenge: '微細なパターニングを、歩留まり良く印刷したい',
+                    tech_1_title: '高精度インク吐出制御',
+                    tech_1_desc: 'ピエゾ技術を用いた微細なコントロールにより、1ピコリットル単位の極めて正確な着弾を実現。不良率を劇的に下げ、高品質な生産を可能にします。',
+                    tech_2_challenge: '製造工程の環境負荷（CO2・廃液）を下げたい',
+                    tech_2_title: '環境負荷低減プロセス',
+                    tech_2_desc: '熱を使わないプロセスとオンデマンドな液滴吐出により、無駄な資源消費と廃液を大幅に削減。サステナブルな製造ラインの構築に貢献します。',
+                    tech_3_challenge: '特殊な機能性インク（高粘度・溶剤など）を使いたい',
+                    tech_3_title: '多様な液剤対応力',
+                    tech_3_desc: '水性、UV、溶剤など幅広いインクへの適合性を持ち、半導体材料やバイオ液剤など、印刷領域を超えた特殊液剤の吐出にも対応します。',
+                    tech_4_challenge: '産業ラインのスピードとタフな連続稼働に耐えられない',
+                    tech_4_title: '高速・高耐久ヘッド',
+                    tech_4_desc: '熱によるヘッドへのダメージがないため劣化が少なく、24時間稼働の過酷な産業用途に耐えうる圧倒的な耐久性と印刷速度を誇ります。',
+                    tech_5_challenge: '限られたスペースの既存設備にインクジェットを組み込みたい',
+                    tech_5_title: 'コンパクト設計',
+                    tech_5_desc: '装置への組み込みやすさを徹底的に追求。ヘッド自体が小型でモジュール化されているため、限られたスペースにも柔軟にレイアウトできます。',
+                    tech_6_challenge: '自社だけでシステム構築を行うノウハウがない',
+                    tech_6_title: 'システムインテグレーション',
+                    tech_6_desc: 'お客さまの生産ラインに合わせた柔軟なシステム構築をサポート。プリントヘッドの提供だけでなく、最適な吐出条件出しまで伴走します。',
+                    sol_title: '最適解',
+                    sol_subtitle: '技術のアウトカム',
+                    sol_1_title: '生産プロセスのデジタル化',
+                    sol_1_desc: 'エプソンの「PrecisionCore」プリントヘッドを中核とするインクジェット技術により、従来のアナログな印刷や製造工程をデジタル化。版を必要としないため、多品種小ロットや短納期生産に柔軟に対応し、在庫レス・廃棄ロス削減などサプライチェーン全体の効率化に貢献します。',
+                    sol_2_title: 'サステナブルなモノづくり',
+                    sol_2_desc: 'エプソン独自の「Heat-Free Technology（熱を使わないインク吐出）」により、圧倒的な低消費電力とCO₂排出量削減を実現。また、必要な場所に必要な量だけ液剤を塗布する非接触プロセスにより、資源の無駄や廃液を極小化し、環境ビジョンに直結する環境負荷と経済性の両立を果たします。',
+                    sol_3_title: '新規アプリケーション開拓',
+                    sol_3_desc: '多種多様な液剤を高精度に吐出できる強みを生かし、紙やテキスタイルへの印刷を超えた新たな産業領域を創出。フラットパネルディスプレイの製造、半導体・電子デバイスの微細配線、さらにはバイオプリンティング領域など、次世代の製造プロセスを「インクジェット」の概念で革新します。',
+                    eng_title: '信頼できる技術者',
+                    eng_1_name: '山田 太郎',
+                    eng_1_dept: 'プリントヘッド開発部',
+                    eng_1_desc: '流体力学の専門家として、インク吐出の極限の精度を追求しています。',
+                    eng_2_name: '佐藤 理恵',
+                    eng_2_dept: 'マテリアルサイエンス部門',
+                    eng_2_desc: '様々な産業用インクとヘッドの適合性を検証する材料開発のプロフェッショナル。',
+                    eng_3_name: '鈴木 健一',
+                    eng_3_dept: 'システムインテグレーション',
+                    eng_3_desc: 'お客様の既存ラインにいかにスムーズにヘッドを組み込むかを設計します。',
+                    eng_4_name: '田中 美咲',
+                    eng_4_dept: '品質保証部',
+                    eng_4_desc: '過酷な産業環境でも安定稼働するための厳しい耐久テストを統括。',
+                    res_title: '関連情報・リソース',
+                    res_subtitle: '各種資料や事例、最新情報はこちらからご覧いただけます。',
+                    res_1_title: 'ホワイトペーパー',
+                    res_1_desc: 'インクジェット技術の深い理解と、業界ごとの課題解決に関する専門資料。',
+                    res_2_title: 'カタログ',
+                    res_2_desc: '最新の産業用プリントヘッドや関連製品のスペック・詳細仕様情報。',
+                    res_3_title: 'News',
+                    res_3_desc: 'エプソンのインクジェットソリューションに関する最新ニュース・展示会情報。',
+                    res_4_title: '注力技術・投資領域',
+                    res_4_desc: '次世代の産業革新を見据えた、当社のインクジェット研究開発の重点領域や投資方針。',
+                    res_5_title: '登壇・寄稿アーカイブ',
+                    res_5_desc: '当社技術者が登壇した展示会・カンファレンスや、専門誌への寄稿記事などの記録。',
+                    res_6_title: '論文',
+                    res_6_desc: '研究開発に基づく、学術的な技術論文や研究発表のアーカイブ。',
+                    btn_back: '前のページへ戻る',
+                    detail_title: '極限の精度を求めて：<br>次世代ピエゾヘッド開発の軌跡',
+                    detail_p1: '私たちが挑んだのは、従来のインクジェットの常識を覆す「超高精細」と「高速印刷」の両立でした。流体力学の観点からインクの挙動を徹底的にシミュレーションし、ピエゾ素子の微細な振動制御を最適化することで、1ピコリットル単位の極めて正確な着弾を実現しました。',
+                    detail_p2: '特に困難だったのは、異なる粘度の産業用インクを同一のヘッドで安定して長期間吐出させることです。数え切れないほどの試作と過酷な環境テストを繰り返し、ついにあらゆる産業ニーズに応える当社独自の吐出制御アルゴリズムを完成させました。この技術が、お客様のモノづくりを根底から変えると確信しています。',
+                    wp_title: '最新ホワイトペーパー<br>無料ダウンロード',
+                    wp_desc: 'エプソンのインクジェット技術が拓く、最先端アプリケーションに関する技術資料をご用意しています。ご希望の資料を選択してダウンロードしてください。',
+                    wp_1_title: 'バイオプリンティングの最前線',
+                    wp_1_desc: '細胞を含むバイオインクの高生存率を維持する微細液滴制御と、再生医療・創薬への応用。',
+                    wp_2_title: 'プリンテッドエレクトロニクス',
+                    wp_2_desc: '高粘度な導電性インクの安定吐出メカニズムと、次世代フレキシブルデバイス製造の歩留まり向上。',
+                    wp_3_title: '3D曲面ダイレクトプリント',
+                    wp_3_desc: '産業用ロボットとの高度な同期制御による、複雑な立体物への高精細オンデマンド印刷技術。',
+                    wp_form_title: 'ダウンロードフォーム',
+                    wp_form_select: 'ご希望の資料（複数選択可）',
+                    wp_form_company: '会社名',
+                    wp_form_dept: '部署名',
+                    wp_form_name: '氏名',
+                    wp_form_email: 'メールアドレス（会社）',
+                    wp_form_phone: '電話番号',
+                    wp_form_submit: '資料をダウンロードする',
+                    wp_form_submitted: '送信されました',
+                    wp_form_privacy: 'ご入力いただいた情報は、当社のプライバシーポリシーに従い厳重に管理し、製品・サービスに関する情報提供に利用させていただきます。',
+                    footer_about: 'エプソンは、独自のマイクロピエゾ技術を活用し、産業向けインクジェットソリューションを通じて、社会の課題解決と持続可能な発展に貢献します。',
+                    footer_sol_title: 'ソリューション',
+                    footer_sol_1: 'プリントヘッド',
+                    footer_sol_2: 'インク・液剤',
+                    footer_sol_3: '導入サポート',
+                    footer_corp_title: '企業情報',
+                    footer_corp_1: '会社概要',
+                    footer_corp_2: 'サステナビリティ',
+                    footer_corp_3: '採用情報',
+                    footer_terms: 'ご利用条件',
+                    footer_privacy: 'プライバシーポリシー',
+                    footer_sitemap: 'サイトマップ'
+                },
+                en: {
+                    nav_products: 'Products',
+                    nav_technology: 'Technology',
+                    nav_support: 'Support',
+                    nav_contact: 'Contact Us',
+                    hero_title: 'It was our customers’ toughest challenges<br>that drove our technology forward.<br class="hidden md:block">',
+                    hero_body: `Finer, faster, and more versatile.<br>
+                        To meet our customers’ expectations, Epson engineers have relentlessly refined our technology.<br>
+                        Test, measure, adjust, and test again.<br>
+                        Through this dedication, Epson inkjet evolved to deliver microscopic droplets precisely on target at high speed.<br>
+                        Today, this precision is needed far beyond the traditional printing market—<br>
+                        in semiconductor fabrication and next-generation solar cell manufacturing.<br>
+                        <br>
+                        Now, Epson moves beyond printing to a new frontier.<br>
+                        Just as always, we sincerely face what our customers want to create,<br>
+                        iterating boldly and seeing every challenge through to completion.<br>
+                        The technologies honed there become the power to solve the next industry’s greatest challenges.<br>
+                        Answering expectations with engineering excellence—<br>
+                        that is our mission toward ENGINEERED FUTURE 2035.<br>
+                        Industrial printhead technology that revolutionizes every manufacturing process.`,
+                    hero_vision_btn: 'Management Commitment',
+                    fnav_tech: 'Epson Technology',
+                    fnav_solutions: 'Optimal Solutions',
+                    fnav_engineers: 'Our Experts',
+                    fnav_resources: 'Resources',
+                    map_title: 'Technology Overview',
+                    tech_title: 'Epson Technology',
+                    tech_subtitle: 'Epson’s problem-solving capabilities driven by customer challenges',
+                    tech_1_challenge: 'Need ultra-fine patterning with high production yield',
+                    tech_1_title: 'High-Precision Droplet Control',
+                    tech_1_desc: 'Micro-piezo actuation achieves pinpoint accuracy down to the picoliter scale, dramatically reducing defect rates and enabling high-quality manufacturing.',
+                    tech_2_challenge: 'Want to reduce CO2 emissions and liquid waste in manufacturing',
+                    tech_2_title: 'Eco-Friendly Process',
+                    tech_2_desc: 'Heat-free, on-demand droplet ejection drastically cuts resource consumption and chemical waste, supporting sustainable production lines.',
+                    tech_3_challenge: 'Need to jet specialized functional fluids (high viscosity, solvents, etc.)',
+                    tech_3_title: 'Broad Fluid Compatibility',
+                    tech_3_desc: 'Compatible with aqueous, UV, and solvent inks as well as advanced functional fluids such as semiconductor materials and bio-inks.',
+                    tech_4_challenge: 'Heads fail under high-speed, 24/7 industrial operation',
+                    tech_4_title: 'High-Speed & High-Durability Heads',
+                    tech_4_desc: 'Because no heat is applied during ejection, head degradation is minimal—delivering exceptional durability and throughput for 24/7 industrial lines.',
+                    tech_5_challenge: 'Need to integrate inkjet into tight spaces on existing equipment',
+                    tech_5_title: 'Compact Modular Design',
+                    tech_5_desc: 'Engineered for seamless equipment integration. Compact, modular printheads allow flexible layout even in space-constrained production lines.',
+                    tech_6_challenge: 'Lack in-house expertise to build a complete inkjet system',
+                    tech_6_title: 'System Integration Support',
+                    tech_6_desc: 'We provide end-to-end support tailored to your line—from printhead supply to waveform tuning and optimal jetting condition setup.',
+                    sol_title: 'Optimal Solutions',
+                    sol_subtitle: 'Outcomes of Our Technology',
+                    sol_1_title: 'Digitalization of Production Processes',
+                    sol_1_desc: 'Powered by Epson’s PrecisionCore printheads, we transform traditional analog printing and manufacturing into agile digital workflows. Plateless production enables high-mix, low-volume manufacturing, shorter lead times, and inventory-free supply chains.',
+                    sol_2_title: 'Sustainable Manufacturing',
+                    sol_2_desc: 'Epson’s proprietary Heat-Free Technology delivers ultra-low power consumption and reduced CO2 emissions. Non-contact, on-demand fluid deposition minimizes waste and environmental impact while improving operational economics.',
+                    sol_3_title: 'New Application Frontiers',
+                    sol_3_desc: 'Leveraging precision ejection of diverse functional fluids, we unlock industrial applications beyond paper and textiles—including flat-panel displays, semiconductor fine wiring, and bioprinting.',
+                    eng_title: 'Trusted Engineers',
+                    eng_1_name: 'Taro Yamada',
+                    eng_1_dept: 'Printhead Development Dept.',
+                    eng_1_desc: 'A fluid dynamics specialist pursuing the ultimate precision in droplet ejection.',
+                    eng_2_name: 'Rie Sato',
+                    eng_2_dept: 'Material Science Division',
+                    eng_2_desc: 'A materials expert verifying compatibility between industrial inks and printheads.',
+                    eng_3_name: 'Kenichi Suzuki',
+                    eng_3_dept: 'System Integration',
+                    eng_3_desc: 'Designs seamless integration of printheads into customers’ existing production lines.',
+                    eng_4_name: 'Misaki Tanaka',
+                    eng_4_dept: 'Quality Assurance Dept.',
+                    eng_4_desc: 'Leads rigorous endurance testing to ensure stable operation in harsh industrial environments.',
+                    res_title: 'Related Resources',
+                    res_subtitle: 'Explore our technical documents, publications, and latest updates.',
+                    res_1_title: 'Whitepapers',
+                    res_1_desc: 'In-depth technical insights on inkjet innovation and industry-specific problem solving.',
+                    res_2_title: 'Catalogs',
+                    res_2_desc: 'Detailed specifications and lineups of our latest industrial printheads and products.',
+                    res_3_title: 'News',
+                    res_3_desc: 'Latest announcements, press releases, and exhibition schedules for Epson Inkjet Solutions.',
+                    res_4_title: 'Focus Technologies & R&D',
+                    res_4_desc: 'Key R&D focus areas and investment strategies driving next-generation industrial innovation.',
+                    res_5_title: 'Talks & Publications',
+                    res_5_desc: 'Archive of conference keynotes, exhibitions, and contributed technical articles by our engineers.',
+                    res_6_title: 'Technical Papers',
+                    res_6_desc: 'Academic papers and research presentations based on our core R&D.',
+                    btn_back: 'Back to Previous Page',
+                    detail_title: 'Pursuing Ultimate Precision:<br>The Journey of Next-Gen Piezo Head Development',
+                    detail_p1: 'Our challenge was to overturn conventional inkjet limits by achieving both ultra-high definition and high-speed printing. Through exhaustive fluid dynamics simulations and optimized piezo vibration control, we achieved pinpoint droplet placement at the 1-picoliter scale.',
+                    detail_p2: 'The hardest hurdle was stably jetting industrial inks of varying viscosities from a single head over extended periods. After countless prototypes and rigorous endurance tests, we perfected our proprietary jetting control algorithm—a breakthrough we believe will transform manufacturing from the ground up.',
+                    wp_title: 'Latest Whitepapers<br>Free Download',
+                    wp_desc: 'Discover technical documentation on cutting-edge applications powered by Epson inkjet technology. Select your desired papers to download.',
+                    wp_1_title: 'Frontiers of Bioprinting',
+                    wp_1_desc: 'Micro-droplet control maintaining high cell viability in bio-inks for regenerative medicine and drug discovery.',
+                    wp_2_title: 'Printed Electronics',
+                    wp_2_desc: 'Stable jetting mechanisms for high-viscosity conductive inks and yield improvements in flexible device manufacturing.',
+                    wp_3_title: '3D Curved Surface Direct Printing',
+                    wp_3_desc: 'High-definition on-demand printing on complex 3D objects via synchronized industrial robotics.',
+                    wp_form_title: 'Download Form',
+                    wp_form_select: 'Select Whitepapers (Multiple allowed)',
+                    wp_form_company: 'Company Name',
+                    wp_form_dept: 'Department',
+                    wp_form_name: 'Full Name',
+                    wp_form_email: 'Work Email',
+                    wp_form_phone: 'Phone Number',
+                    wp_form_submit: 'Download Whitepapers',
+                    wp_form_submitted: 'Submitted Successfully',
+                    wp_form_privacy: 'Your information will be strictly managed in accordance with our Privacy Policy and used to provide product and service updates.',
+                    footer_about: 'Epson leverages its proprietary Micro Piezo technology to solve societal challenges and contribute to sustainable development through industrial inkjet solutions.',
+                    footer_sol_title: 'Solutions',
+                    footer_sol_1: 'Printheads',
+                    footer_sol_2: 'Inks & Functional Fluids',
+                    footer_sol_3: 'Integration Support',
+                    footer_corp_title: 'Corporate',
+                    footer_corp_1: 'About Us',
+                    footer_corp_2: 'Sustainability',
+                    footer_corp_3: 'Careers',
+                    footer_terms: 'Terms of Use',
+                    footer_privacy: 'Privacy Policy',
+                    footer_sitemap: 'Sitemap'
+                }
+            };
+
+            let currentLang = 'ja';
+            const langJaBtn = document.getElementById('lang-ja-btn');
+            const langEnBtn = document.getElementById('lang-en-btn');
+            const visionLink = document.getElementById('vision-link');
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                document.documentElement.lang = lang;
+
+                // Update plain text elements
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                // Update HTML elements (with <br> etc.)
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+
+                // Update Vision Link URL
+                if (visionLink) {
+                    visionLink.href = lang === 'en'
+                        ? 'https://corporate.epson/en/philosophy/vision/'
+                        : 'https://corporate.epson/ja/philosophy/vision/';
+                }
+
+                // Update Button Styles
+                if (lang === 'ja') {
+                    langJaBtn.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all bg-corporate-blue text-white shadow-sm';
+                    langEnBtn.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-600 hover:text-corporate-blue';
+                } else {
+                    langEnBtn.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all bg-corporate-blue text-white shadow-sm';
+                    langJaBtn.className = 'px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-600 hover:text-corporate-blue';
+                }
+            }
+
+            if (langJaBtn && langEnBtn) {
+                langJaBtn.addEventListener('click', () => setLanguage('ja'));
+                langEnBtn.addEventListener('click', () => setLanguage('en'));
+            }
+
+            // ==========================================
             // Scroll Reveal Animation
+            // ==========================================
             const reveals = document.querySelectorAll('.reveal');
             
             const revealOnScroll = () => {
@@ -640,15 +942,24 @@
             };
             
             window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll(); // 読み込み時の初期チェック
+            revealOnScroll();
 
+            // ==========================================
             // Smooth Scrolling for Anchor Links
+            // ==========================================
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
+                    e.preventDefault();
                     
+                    // If currently in sub-view, return to main view first
+                    if (mainView.classList.contains('hidden')) {
+                        detailView.classList.add('hidden');
+                        wpView.classList.add('hidden');
+                        mainView.classList.remove('hidden');
+                    }
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         targetElement.scrollIntoView({
@@ -658,26 +969,39 @@
                 });
             });
 
-            // SPA Navigation Logic (山田太郎の詳細ページ遷移)
-            const yamadaCard = document.getElementById('yamada-card');
+            // ==========================================
+            // SPA Navigation Logic
+            // ==========================================
             const mainView = document.getElementById('main-view');
             const detailView = document.getElementById('detail-view');
+            const wpView = document.getElementById('whitepaper-view');
+            const headerLogo = document.getElementById('header-logo');
+
+            // Clicking header logo returns to top of main view
+            if (headerLogo) {
+                headerLogo.addEventListener('click', () => {
+                    detailView.classList.add('hidden');
+                    wpView.classList.add('hidden');
+                    mainView.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // 山田太郎の詳細ページ遷移
+            const yamadaCard = document.getElementById('yamada-card');
             const backBtn = document.getElementById('back-btn');
 
             if(yamadaCard && mainView && detailView && backBtn) {
-                // 山田さんのカードをクリックした時
                 yamadaCard.addEventListener('click', () => {
                     mainView.classList.add('hidden');
                     detailView.classList.remove('hidden');
-                    window.scrollTo({ top: 0, behavior: 'auto' }); // ページトップへ戻る
+                    window.scrollTo({ top: 0, behavior: 'auto' });
                 });
 
-                // 戻るボタンをクリックした時
                 backBtn.addEventListener('click', () => {
                     detailView.classList.add('hidden');
                     mainView.classList.remove('hidden');
                     
-                    // スムーズに技術者セクションへ戻る
                     setTimeout(() => {
                         const engineersSection = document.getElementById('engineers');
                         const headerOffset = 100;
@@ -691,14 +1015,14 @@
                 });
             }
 
-            // SPA Navigation Logic (ホワイトペーパー ダウンロードページ遷移)
+            // ホワイトペーパー ダウンロードページ遷移
             const wpCard = document.getElementById('whitepaper-card');
-            const wpView = document.getElementById('whitepaper-view');
             const wpBackBtn = document.getElementById('wp-back-btn');
+            const wpForm = document.getElementById('wp-form');
 
             if(wpCard && wpView && wpBackBtn) {
                 wpCard.addEventListener('click', (e) => {
-                    e.preventDefault(); // aタグのデフォルト遷移を無効化
+                    e.preventDefault();
                     mainView.classList.add('hidden');
                     wpView.classList.remove('hidden');
                     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -708,7 +1032,6 @@
                     wpView.classList.add('hidden');
                     mainView.classList.remove('hidden');
                     
-                    // スムーズに関連リソースセクションへ戻る
                     setTimeout(() => {
                         const resourcesSection = document.getElementById('resources');
                         const headerOffset = 100;
@@ -719,6 +1042,19 @@
                             behavior: "smooth"
                         });
                     }, 50);
+                });
+            }
+
+            // ホワイトペーパー送信処理（多言語対応）
+            if (wpForm) {
+                wpForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = document.getElementById('wp-submit-btn');
+                    const msg = translations[currentLang].wp_form_submitted;
+                    btn.innerHTML = `<i class="fas fa-check"></i> <span>${msg}</span>`;
+                    btn.classList.replace('bg-corporate-blue', 'bg-green-600');
+                    btn.classList.replace('hover:bg-blue-800', 'hover:bg-green-700');
+                    btn.disabled = true;
                 });
             }
         });
