@@ -163,124 +163,109 @@
         <section id="map" class="py-24 bg-white scroll-mt-32">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="reveal">
-                    <h2 class="text-3xl font-bold mb-12 text-gray-900" data-i18n="map_title">技術の全体像</h2>
-                    <!-- 提供されたSVG画像の配置 -->
-                    <img src="https://www.epson.jp/products/inkjet/images/about_img.svg" alt="技術マップ" class="w-full h-auto mx-auto max-w-3xl drop-shadow-sm" onerror="this.src='https://placehold.co/800x400/E6F0FA/003399?text=Technology+Map'">
-                </div>
-            </div>
-        </section>
+                    <h2 class="text-3xl font-bold mb-10 text-gray-900" data-i18n="map_title">エプソンが解決できる課題</h2>
+                    
+                    <!-- インラインSVG図解（JP/EN多言語対応） -->
+                    <div class="w-full max-w-4xl mx-auto overflow-hidden">
+                        <svg viewBox="0 0 1000 500" class="w-full h-auto mx-auto select-none" role="img" aria-label="エプソンが解決できる課題">
+                            <defs>
+                                <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.1"/>
+                                </filter>
+                            </defs>
 
-        <!-- EPSONの技術 Section (課題ベース) -->
-        <section id="technology" class="py-24 bg-gray-50 border-y border-gray-200 scroll-mt-32">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 reveal">
-                    <p class="text-corporate-blue font-bold tracking-wider text-sm mb-2">TECHNOLOGY</p>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900" data-i18n="tech_title">EPSONの技術</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto" data-i18n="tech_subtitle">お客さまの課題から紐解く、エプソンの解決力</p>
-                    <div class="w-12 h-1 bg-corporate-blue mx-auto mt-6"></div>
-                </div>
+                            <!-- 外側アーチ: 技術と思想の基盤 -->
+                            <path d="M 140 435 A 360 360 0 0 1 860 435 L 780 435 A 280 280 0 0 0 220 435 Z" fill="#185C96"/>
+                            <text x="500" y="122" text-anchor="middle" fill="#FFFFFF" font-size="19" font-weight="700" data-i18n="diag_arc_outer">技術と思想の基盤</text>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Tech Item 1 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_1_challenge">微細なパターニングを、歩留まり良く印刷したい</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-tint"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_1_title">高精度インク吐出制御</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_1_desc">ピエゾ技術を用いた微細なコントロールにより、1ピコリットル単位の極めて正確な着弾を実現。不良率を劇的に下げ、高品質な生産を可能にします。</p>
-                        </div>
-                    </div>
+                            <!-- 中間アーチ: IJSが積み上げた技術 -->
+                            <path d="M 220 435 A 280 280 0 0 1 780 435 L 700 435 A 200 200 0 0 0 300 435 Z" fill="#46AECB"/>
+                            <text x="500" y="200" text-anchor="middle" fill="#2A2A2A" font-size="19" font-weight="700" data-i18n="diag_arc_mid">IJSが積み上げた技術</text>
 
-                    <!-- Tech Item 2 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow delay-100 overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_2_challenge">製造工程の環境負荷（CO2・廃液）を下げたい</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-leaf"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_2_title">環境負荷低減プロセス</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_2_desc">熱を使わないプロセスとオンデマンドな液滴吐出により、無駄な資源消費と廃液を大幅に削減。サステナブルな製造ラインの構築に貢献します。</p>
-                        </div>
-                    </div>
+                            <!-- 内側アーチ: EF35の先端技術 -->
+                            <path d="M 300 435 A 200 200 0 0 1 700 435 L 625 435 A 125 125 0 0 0 375 435 Z" fill="#C4E9F2"/>
+                            <text x="500" y="278" text-anchor="middle" fill="#333333" font-size="18" font-weight="700" data-i18n="diag_arc_inner">EF35の先端技術</text>
 
-                    <!-- Tech Item 3 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow delay-200 overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_3_challenge">特殊な機能性インク（高粘度・溶剤など）を使いたい</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-layer-group"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_3_title">多様な液剤対応力</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_3_desc">水性、UV、溶剤など幅広いインクへの適合性を持ち、半導体材料やバイオ液剤など、印刷領域を超えた特殊液剤の吐出にも対応します。</p>
-                        </div>
-                    </div>
+                            <!-- 中心白半円: 省・小・精 & PRECISIONCORE -->
+                            <path d="M 375 435 A 125 125 0 0 1 625 435 Z" fill="#FFFFFF"/>
+                            <text x="500" y="365" text-anchor="middle" fill="#333333" font-size="25" font-weight="800" letter-spacing="4" data-i18n="diag_core_motto">省・小・精</text>
 
-                    <!-- Tech Item 4 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_4_challenge">産業ラインのスピードとタフな連続稼働に耐えられない</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_4_title">高速・高耐久ヘッド</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_4_desc">熱によるヘッドへのダメージがないため劣化が少なく、24時間稼働の過酷な産業用途に耐えうる圧倒的な耐久性と印刷速度を誇ります。</p>
-                        </div>
-                    </div>
+                            <!-- PRECISIONCORE ロゴ風マーク -->
+                            <g transform="translate(535, 388)">
+                                <polygon points="0,-16 16,0 0,16 -16,0" fill="none" stroke="#8C939A" stroke-width="4.5"/>
+                                <polygon points="0,-7 7,0 0,7 -7,0" fill="#78B833"/>
+                            </g>
+                            <text x="500" y="424" text-anchor="middle" font-size="14.5" font-weight="800" letter-spacing="0.5">
+                                <tspan fill="#8C939A">PRECISION</tspan><tspan fill="#78B833">CORE</tspan>
+                            </text>
 
-                    <!-- Tech Item 5 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow delay-100 overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_5_challenge">限られたスペースの既存設備にインクジェットを組み込みたい</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-compress-arrows-alt"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_5_title">コンパクト設計</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_5_desc">装置への組み込みやすさを徹底的に追求。ヘッド自体が小型でモジュール化されているため、限られたスペースにも柔軟にレイアウトできます。</p>
-                        </div>
-                    </div>
+                            <!-- 左側タグ 1: 成膜・コーティング -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="210" y="182" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="273" y="200" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l1_1">成膜・</text>
+                                <text x="273" y="218" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l1_2">コーティング</text>
+                            </g>
 
-                    <!-- Tech Item 6 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 reveal hover:shadow-lg transition-shadow delay-200 overflow-hidden flex flex-col">
-                        <div class="bg-blue-50/80 p-6 border-b border-blue-100 flex flex-col justify-start md:min-h-[136px] lg:min-h-[152px]">
-                            <span class="self-start inline-block text-xs font-bold uppercase tracking-wider text-corporate-blue bg-white px-2.5 py-1 rounded-full mb-3 shadow-sm">Challenge</span>
-                            <p class="font-bold text-gray-900 text-base leading-snug" data-i18n="tech_6_challenge">自社だけでシステム構築を行うノウハウがない</p>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 bg-corporate-blue text-white rounded-lg flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-900" data-i18n="tech_6_title">システムインテグレーション</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed flex-grow" data-i18n="tech_6_desc">お客さまの生産ラインに合わせた柔軟なシステム構築をサポート。プリントヘッドの提供だけでなく、最適な吐出条件出しまで伴走します。</p>
-                        </div>
+                            <!-- 左側タグ 2: サイン・ディスプレイ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="115" y="260" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="178" y="278" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l2_1">サイン・</text>
+                                <text x="178" y="296" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l2_2">ディスプレイ</text>
+                            </g>
+
+                            <!-- 左側タグ 3: テキスタイル -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="180" y="335" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="243" y="361" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l3_1">テキスタイル</text>
+                            </g>
+
+                            <!-- 左側タグ 4: ラベル・パッケージ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="80" y="395" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="143" y="413" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l4_1">ラベル・</text>
+                                <text x="143" y="431" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l4_2">パッケージ</text>
+                            </g>
+
+                            <!-- 右側タグ 1: ディスプレイ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="640" y="162" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="703" y="188" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r1_1">ディスプレイ</text>
+                            </g>
+
+                            <!-- 右側タグ 2: バイオ・マイクロアレイ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="560" y="220" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="623" y="238" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r2_1">バイオ・</text>
+                                <text x="623" y="256" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r2_2">マイクロアレイ</text>
+                            </g>
+
+                            <!-- 右側タグ 3: 電子基盤 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="708" y="280" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="771" y="306" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r3_1">電子基盤</text>
+                            </g>
+
+                            <!-- 右側タグ 4: 立体物加飾 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="640" y="338" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="703" y="364" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r4_1">立体物加飾</text>
+                            </g>
+
+                            <!-- 右側タグ 5: 次世代太陽電池 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="633" y="395" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
+                                <text x="696" y="413" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r5_1">次世代</text>
+                                <text x="696" y="431" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r5_2">太陽電池</text>
+                            </g>
+
+                            <!-- 下部左矢印バナー: 印刷工程の課題 -->
+                            <polygon points="85,452 470,452 490,473 470,494 85,494" fill="#174487"/>
+                            <text x="282" y="479" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_left">印刷工程の課題</text>
+
+                            <!-- 下部右矢印バナー: 製造工程の課題 -->
+                            <polygon points="530,452 915,452 915,494 530,494 510,473" fill="#174487"/>
+                            <text x="718" y="479" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_right">製造工程の課題</text>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -775,7 +760,27 @@
                     fnav_cases: 'ユースケース',
                     fnav_knowledge: 'ナレッジ',
                     fnav_documents: '技術/製品資料',
-                    map_title: '技術の全体像',
+                    map_title: 'エプソンが解決できる課題',
+                    diag_arc_outer: '技術と思想の基盤',
+                    diag_arc_mid: 'IJSが積み上げた技術',
+                    diag_arc_inner: 'EF35の先端技術',
+                    diag_core_motto: '省・小・精',
+                    diag_l1_1: '成膜・',
+                    diag_l1_2: 'コーティング',
+                    diag_l2_1: 'サイン・',
+                    diag_l2_2: 'ディスプレイ',
+                    diag_l3_1: 'テキスタイル',
+                    diag_l4_1: 'ラベル・',
+                    diag_l4_2: 'パッケージ',
+                    diag_r1_1: 'ディスプレイ',
+                    diag_r2_1: 'バイオ・',
+                    diag_r2_2: 'マイクロアレイ',
+                    diag_r3_1: '電子基盤',
+                    diag_r4_1: '立体物加飾',
+                    diag_r5_1: '次世代',
+                    diag_r5_2: '太陽電池',
+                    diag_banner_left: '印刷工程の課題',
+                    diag_banner_right: '製造工程の課題',
                     tech_title: 'EPSONの技術',
                     tech_subtitle: 'お客さまの課題から紐解く、エプソンの解決力',
                     tech_1_challenge: '微細なパターニングを、歩留まり良く印刷したい',
@@ -899,7 +904,27 @@
                     fnav_cases: 'Use Cases',
                     fnav_knowledge: 'Knowledge',
                     fnav_documents: 'Documents',
-                    map_title: 'Technology Overview',
+                    map_title: 'Challenges Epson Can Solve',
+                    diag_arc_outer: 'Technology & Philosophy Foundation',
+                    diag_arc_mid: 'Accumulated IJS Technologies',
+                    diag_arc_inner: 'EF35 Frontier Technologies',
+                    diag_core_motto: 'Sho-Sho-Sei',
+                    diag_l1_1: 'Film Deposition',
+                    diag_l1_2: '& Coating',
+                    diag_l2_1: 'Signage &',
+                    diag_l2_2: 'Display',
+                    diag_l3_1: 'Textile',
+                    diag_l4_1: 'Label &',
+                    diag_l4_2: 'Packaging',
+                    diag_r1_1: 'Displays',
+                    diag_r2_1: 'Bio &',
+                    diag_r2_2: 'Microarray',
+                    diag_r3_1: 'Electronics',
+                    diag_r4_1: '3D Decoration',
+                    diag_r5_1: 'Next-Gen',
+                    diag_r5_2: 'Solar Cells',
+                    diag_banner_left: 'Printing Process Challenges',
+                    diag_banner_right: 'Manufacturing Process Challenges',
                     tech_title: 'Epson Technology',
                     tech_subtitle: 'Epson’s problem-solving capabilities driven by customer challenges',
                     tech_1_challenge: 'Need ultra-fine patterning with high production yield',
