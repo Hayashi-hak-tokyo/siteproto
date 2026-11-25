@@ -161,110 +161,240 @@
 
         <!-- Illustration / Map Section -->
         <section id="map" class="py-24 bg-white scroll-mt-32">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="reveal">
-                    <h2 class="text-3xl font-bold mb-10 text-gray-900" data-i18n="map_title">エプソンが解決できる課題</h2>
+                    <h2 class="text-3xl font-bold mb-10 text-gray-900" data-i18n="map_title">エプソンのIJSが解決できる課題の広がり</h2>
                     
                     <!-- インラインSVG図解（JP/EN多言語対応） -->
-                    <div class="w-full max-w-4xl mx-auto overflow-hidden">
-                        <svg viewBox="0 0 1000 500" class="w-full h-auto mx-auto select-none" role="img" aria-label="エプソンが解決できる課題">
+                    <div class="w-full max-w-5xl mx-auto overflow-hidden">
+                        <svg viewBox="0 0 1160 540" class="w-full h-auto mx-auto select-none" role="img" aria-label="エプソンのIJSが解決できる課題の広がり">
                             <defs>
                                 <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="130%">
-                                    <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.1"/>
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.12"/>
                                 </filter>
+                                <clipPath id="clip-img-l1"><circle cx="315" cy="95" r="34"/></clipPath>
+                                <clipPath id="clip-img-l2"><circle cx="242" cy="175" r="36"/></clipPath>
+                                <clipPath id="clip-img-l3"><circle cx="195" cy="272" r="36"/></clipPath>
+                                <clipPath id="clip-img-l4"><circle cx="132" cy="382" r="36"/></clipPath>
+                                <clipPath id="clip-img-r1"><circle cx="815" cy="95" r="34"/></clipPath>
+                                <clipPath id="clip-img-r2"><circle cx="888" cy="175" r="36"/></clipPath>
+                                <clipPath id="clip-img-r3"><circle cx="955" cy="272" r="36"/></clipPath>
+                                <clipPath id="clip-img-r4"><circle cx="1015" cy="382" r="36"/></clipPath>
                             </defs>
 
-                            <!-- 外側アーチ: 技術と思想の基盤 -->
-                            <path d="M 140 435 A 360 360 0 0 1 860 435 L 780 435 A 280 280 0 0 0 220 435 Z" fill="#185C96"/>
-                            <text x="500" y="122" text-anchor="middle" fill="#FFFFFF" font-size="19" font-weight="700" data-i18n="diag_arc_outer">技術と思想の基盤</text>
+                            <!-- 外側アーチ: IJSが未来を拓く可能性（産業） -->
+                            <path d="M 220 475 A 360 360 0 0 1 940 475 L 860 475 A 280 280 0 0 0 300 475 Z" fill="#185C96"/>
+                            <text x="580" y="155" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="700" data-i18n="diag_arc_outer">IJSが未来を拓く可能性（産業）</text>
 
-                            <!-- 中間アーチ: IJSが積み上げた技術 -->
-                            <path d="M 220 435 A 280 280 0 0 1 780 435 L 700 435 A 200 200 0 0 0 300 435 Z" fill="#46AECB"/>
-                            <text x="500" y="200" text-anchor="middle" fill="#2A2A2A" font-size="19" font-weight="700" data-i18n="diag_arc_mid">IJSが積み上げた技術</text>
+                            <!-- 中間アーチ: IJSがお応えできる課題 -->
+                            <path d="M 300 475 A 280 280 0 0 1 860 475 L 780 475 A 200 200 0 0 0 380 475 Z" fill="#46AECB"/>
+                            <text x="580" y="232" text-anchor="middle" fill="#1E293B" font-size="18" font-weight="700" data-i18n="diag_arc_mid">IJSがお応えできる課題</text>
 
-                            <!-- 内側アーチ: EF35の先端技術 -->
-                            <path d="M 300 435 A 200 200 0 0 1 700 435 L 625 435 A 125 125 0 0 0 375 435 Z" fill="#C4E9F2"/>
-                            <text x="500" y="278" text-anchor="middle" fill="#333333" font-size="18" font-weight="700" data-i18n="diag_arc_inner">EF35の先端技術</text>
+                            <!-- 内側アーチ: IJSの知見・具体的ファクト -->
+                            <path d="M 380 475 A 200 200 0 0 1 780 475 L 705 475 A 125 125 0 0 0 455 475 Z" fill="#C4E9F2"/>
+                            <text x="580" y="308" text-anchor="middle" fill="#1E293B" font-size="17" font-weight="700" data-i18n="diag_arc_inner">IJSの知見・具体的ファクト</text>
 
-                            <!-- 中心白半円: 省・小・精 & PRECISIONCORE -->
-                            <path d="M 375 435 A 125 125 0 0 1 625 435 Z" fill="#FFFFFF"/>
-                            <text x="500" y="365" text-anchor="middle" fill="#333333" font-size="25" font-weight="800" letter-spacing="4" data-i18n="diag_core_motto">省・小・精</text>
+                            <!-- 中心白半円: IJSの先端技術 / 省・小・精 / PRECISIONCORE -->
+                            <path d="M 455 475 A 125 125 0 0 1 705 475 Z" fill="#FFFFFF"/>
+                            <text x="580" y="382" text-anchor="middle" fill="#333333" font-size="15.5" font-weight="700" data-i18n="diag_core_sub">IJSの先端技術</text>
+                            <text x="580" y="410" text-anchor="middle" fill="#333333" font-size="22" font-weight="800" letter-spacing="3" data-i18n="diag_core_motto">省・小・精</text>
 
                             <!-- PRECISIONCORE ロゴ風マーク -->
-                            <g transform="translate(535, 388)">
-                                <polygon points="0,-16 16,0 0,16 -16,0" fill="none" stroke="#8C939A" stroke-width="4.5"/>
-                                <polygon points="0,-7 7,0 0,7 -7,0" fill="#78B833"/>
+                            <g transform="translate(612, 432)">
+                                <polygon points="0,-13 13,0 0,13 -13,0" fill="none" stroke="#8C939A" stroke-width="4"/>
+                                <polygon points="0,-5.5 5.5,0 0,5.5 -5.5,0" fill="#78B833"/>
                             </g>
-                            <text x="500" y="424" text-anchor="middle" font-size="14.5" font-weight="800" letter-spacing="0.5">
+                            <text x="580" y="463" text-anchor="middle" font-size="13.5" font-weight="800" letter-spacing="0.5">
                                 <tspan fill="#8C939A">PRECISION</tspan><tspan fill="#78B833">CORE</tspan>
                             </text>
 
-                            <!-- 左側タグ 1: 成膜・コーティング -->
-                            <g filter="url(#badge-shadow)">
-                                <rect x="210" y="182" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="273" y="200" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l1_1">成膜・</text>
-                                <text x="273" y="218" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l1_2">コーティング</text>
+                            <!-- 外周円形ビジュアル（左4つ・右4つ） -->
+                            <g opacity="0.92">
+                                <image href="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="281" y="61" width="68" height="68" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-l1)"/>
+                                <circle cx="315" cy="95" r="34" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="206" y="139" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-l2)"/>
+                                <circle cx="242" cy="175" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="159" y="236" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-l3)"/>
+                                <circle cx="195" cy="272" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="96" y="346" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-l4)"/>
+                                <circle cx="132" cy="382" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="781" y="61" width="68" height="68" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-r1)"/>
+                                <circle cx="815" cy="95" r="34" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="852" y="139" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-r2)"/>
+                                <circle cx="888" cy="175" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="919" y="236" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-r3)"/>
+                                <circle cx="955" cy="272" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+                                <image href="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" x="979" y="346" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-img-r4)"/>
+                                <circle cx="1015" cy="382" r="36" fill="none" stroke="#E2E8F0" stroke-width="2"/>
                             </g>
 
-                            <!-- 左側タグ 2: サイン・ディスプレイ -->
+                            <!-- 外周キャプションテキスト（左） -->
+                            <text x="272" y="74" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l1_1">オリジナル</text>
+                            <text x="272" y="88" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l1_2">ブランドの</text>
+                            <text x="272" y="102" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l1_3">立ち上げ</text>
+
+                            <text x="152" y="232" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l2_1">自分のスタ</text>
+                            <text x="152" y="246" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l2_2">イルで楽し</text>
+                            <text x="152" y="260" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l2_3">むスポーツ</text>
+                            <text x="152" y="274" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l2_4">シーン</text>
+
+                            <text x="88" y="344" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l3_1">これまでな</text>
+                            <text x="88" y="358" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l3_2">かったオリ</text>
+                            <text x="88" y="372" text-anchor="end" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_l3_3">ジナル製品</text>
+
+                            <!-- 外周キャプションテキスト（右） -->
+                            <text x="932" y="148" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r1_1">健康寿命/QOL</text>
+                            <text x="932" y="162" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r1_2">の充実</text>
+
+                            <text x="998" y="236" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r2_1">次世代スマー</text>
+                            <text x="998" y="250" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r2_2">トガジェット</text>
+                            <text x="998" y="264" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r2_3">の進化</text>
+
+                            <text x="1058" y="348" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r3_1">太陽電池モビ</text>
+                            <text x="1058" y="362" text-anchor="start" fill="#475569" font-size="11" font-weight="600" data-i18n="diag_cap_r3_2">リティの実現</text>
+
+                            <!-- 左側カード群 -->
+                            <!-- ラベル・パッケージ -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="115" y="260" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="178" y="278" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l2_1">サイン・</text>
-                                <text x="178" y="296" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l2_2">ディスプレイ</text>
+                                <rect x="330" y="156" width="118" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="389" y="174" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l1_1">ラベル・</text>
+                                <text x="389" y="190" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l1_2">パッケージ</text>
                             </g>
 
-                            <!-- 左側タグ 3: テキスタイル -->
+                            <!-- サイン・ディスプレイ -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="180" y="335" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="243" y="361" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l3_1">テキスタイル</text>
+                                <rect x="312" y="216" width="118" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="371" y="234" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l2_1">サイン・</text>
+                                <text x="371" y="250" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l2_2">ディスプレイ</text>
                             </g>
 
-                            <!-- 左側タグ 4: ラベル・パッケージ -->
+                            <!-- 小ロット・短納期対応 -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="80" y="395" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="143" y="413" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l4_1">ラベル・</text>
-                                <text x="143" y="431" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_l4_2">パッケージ</text>
+                                <rect x="362" y="252" width="118" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="421" y="270" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l3_1">小ロット・</text>
+                                <text x="421" y="286" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_l3_2">短納期対応</text>
                             </g>
 
-                            <!-- 右側タグ 1: ディスプレイ -->
+                            <!-- スポーツ -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="640" y="162" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="703" y="188" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r1_1">ディスプレイ</text>
+                                <rect x="215" y="275" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="274" y="300" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_l4_1">スポーツ</text>
                             </g>
 
-                            <!-- 右側タグ 2: バイオ・マイクロアレイ -->
+                            <!-- ユーザコンテンツの製品化 -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="560" y="220" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="623" y="238" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r2_1">バイオ・</text>
-                                <text x="623" y="256" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r2_2">マイクロアレイ</text>
+                                <rect x="302" y="325" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="363" y="343" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_l5_1">ユーザコンテン</text>
+                                <text x="363" y="359" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_l5_2">ツの製品化</text>
                             </g>
 
-                            <!-- 右側タグ 3: 電子基盤 -->
+                            <!-- CONTOURJET -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="708" y="280" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="771" y="306" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r3_1">電子基盤</text>
+                                <rect x="378" y="366" width="120" height="38" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.3"/>
+                                <text x="438" y="390" text-anchor="middle" fill="#64748B" font-size="11.5" font-weight="700" letter-spacing="0.4">CONTOURJET</text>
                             </g>
 
-                            <!-- 右側タグ 4: 立体物加飾 -->
+                            <!-- オリジナル商品の短納期量産 -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="640" y="338" width="126" height="42" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="703" y="364" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r4_1">立体物加飾</text>
+                                <rect x="266" y="382" width="124" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="328" y="400" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_l6_1">オリジナル商品</text>
+                                <text x="328" y="416" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_l6_2">の短納期量産</text>
                             </g>
 
-                            <!-- 右側タグ 5: 次世代太陽電池 -->
+                            <!-- テキスタイル -->
                             <g filter="url(#badge-shadow)">
-                                <rect x="633" y="395" width="126" height="44" rx="7" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.4"/>
-                                <text x="696" y="413" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r5_1">次世代</text>
-                                <text x="696" y="431" text-anchor="middle" fill="#222222" font-size="13" font-weight="700" data-i18n="diag_r5_2">太陽電池</text>
+                                <rect x="155" y="402" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="214" y="427" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_l7_1">テキスタイル</text>
+                            </g>
+
+                            <!-- 立体物加飾 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="392" y="426" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="451" y="451" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_l8_1">立体物加飾</text>
+                            </g>
+
+                            <!-- 右側カード群 -->
+                            <!-- ロボティクス -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="655" y="156" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="714" y="181" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_r1_1">ロボティクス</text>
+                            </g>
+
+                            <!-- バイオ・マイクロアレイ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="742" y="216" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="803" y="234" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r2_1">バイオ・</text>
+                                <text x="803" y="250" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r2_2">マイクロアレイ</text>
+                            </g>
+
+                            <!-- 必要な場所に必要な量だけ -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="642" y="246" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="703" y="264" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r3_1">必要な場所に</text>
+                                <text x="703" y="280" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r3_2">必要な量だけ</text>
+                            </g>
+
+                            <!-- 電子基盤 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="795" y="282" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="854" y="307" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_r4_1">電子基盤</text>
+                            </g>
+
+                            <!-- 製造工程の歩留向上 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="704" y="298" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="765" y="316" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r5_1">製造工程の歩留</text>
+                                <text x="765" y="332" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r5_2">向上</text>
+                            </g>
+
+                            <!-- Gosanからの採用 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="645" y="346" width="118" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="704" y="364" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r6_1">Gosanからの</text>
+                                <text x="704" y="380" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r6_2">採用</text>
+                            </g>
+
+                            <!-- 次世代半導体 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="832" y="348" width="118" height="40" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="891" y="373" text-anchor="middle" fill="#1E293B" font-size="12.5" font-weight="700" data-i18n="diag_tag_r7_1">次世代半導体</text>
+                            </g>
+
+                            <!-- 量産化・コスト低減 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="725" y="396" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="786" y="414" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r8_1">量産化・コスト</text>
+                                <text x="786" y="430" text-anchor="middle" fill="#1E293B" font-size="11.5" font-weight="700" data-i18n="diag_tag_r8_2">低減</text>
+                            </g>
+
+                            <!-- 次世代太陽電池 -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="852" y="405" width="118" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="911" y="423" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r9_1">次世代</text>
+                                <text x="911" y="439" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r9_2">太陽電池</text>
+                            </g>
+
+                            <!-- 成膜・コーティング -->
+                            <g filter="url(#badge-shadow)">
+                                <rect x="642" y="440" width="122" height="42" rx="6" fill="#FFFFFF" stroke="#4A5568" stroke-width="1.3"/>
+                                <text x="703" y="458" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r10_1">成膜・</text>
+                                <text x="703" y="474" text-anchor="middle" fill="#1E293B" font-size="12" font-weight="700" data-i18n="diag_tag_r10_2">コーティング</text>
                             </g>
 
                             <!-- 下部左矢印バナー: 印刷工程の課題 -->
-                            <polygon points="85,452 470,452 490,473 470,494 85,494" fill="#174487"/>
-                            <text x="282" y="479" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_left">印刷工程の課題</text>
+                            <polygon points="172,492 552,492 572,513 552,534 172,534" fill="#174487"/>
+                            <text x="367" y="519" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_left">印刷工程の課題</text>
 
                             <!-- 下部右矢印バナー: 製造工程の課題 -->
-                            <polygon points="530,452 915,452 915,494 530,494 510,473" fill="#174487"/>
-                            <text x="718" y="479" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_right">製造工程の課題</text>
+                            <polygon points="608,492 988,492 988,534 608,534 588,513" fill="#174487"/>
+                            <text x="793" y="519" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" data-i18n="diag_banner_right">製造工程の課題</text>
                         </svg>
                     </div>
                 </div>
@@ -768,25 +898,59 @@
                     fnav_cases: 'ユースケース',
                     fnav_knowledge: 'ナレッジ',
                     fnav_documents: '技術/製品資料',
-                    map_title: 'エプソンが解決できる課題',
-                    diag_arc_outer: '技術と思想の基盤',
-                    diag_arc_mid: 'IJSが積み上げた技術',
-                    diag_arc_inner: 'EF35の先端技術',
+                    map_title: 'エプソンのIJSが解決できる課題の広がり',
+                    diag_arc_outer: 'IJSが未来を拓く可能性（産業）',
+                    diag_arc_mid: 'IJSがお応えできる課題',
+                    diag_arc_inner: 'IJSの知見・具体的ファクト',
+                    diag_core_sub: 'IJSの先端技術',
                     diag_core_motto: '省・小・精',
-                    diag_l1_1: '成膜・',
-                    diag_l1_2: 'コーティング',
-                    diag_l2_1: 'サイン・',
-                    diag_l2_2: 'ディスプレイ',
-                    diag_l3_1: 'テキスタイル',
-                    diag_l4_1: 'ラベル・',
-                    diag_l4_2: 'パッケージ',
-                    diag_r1_1: 'ディスプレイ',
-                    diag_r2_1: 'バイオ・',
-                    diag_r2_2: 'マイクロアレイ',
-                    diag_r3_1: '電子基盤',
-                    diag_r4_1: '立体物加飾',
-                    diag_r5_1: '次世代',
-                    diag_r5_2: '太陽電池',
+                    diag_cap_l1_1: 'オリジナル',
+                    diag_cap_l1_2: 'ブランドの',
+                    diag_cap_l1_3: '立ち上げ',
+                    diag_cap_l2_1: '自分のスタ',
+                    diag_cap_l2_2: 'イルで楽し',
+                    diag_cap_l2_3: 'むスポーツ',
+                    diag_cap_l2_4: 'シーン',
+                    diag_cap_l3_1: 'これまでな',
+                    diag_cap_l3_2: 'かったオリ',
+                    diag_cap_l3_3: 'ジナル製品',
+                    diag_cap_r1_1: '健康寿命/QOL',
+                    diag_cap_r1_2: 'の充実',
+                    diag_cap_r2_1: '次世代スマー',
+                    diag_cap_r2_2: 'トガジェット',
+                    diag_cap_r2_3: 'の進化',
+                    diag_cap_r3_1: '太陽電池モビ',
+                    diag_cap_r3_2: 'リティの実現',
+                    diag_tag_l1_1: 'ラベル・',
+                    diag_tag_l1_2: 'パッケージ',
+                    diag_tag_l2_1: 'サイン・',
+                    diag_tag_l2_2: 'ディスプレイ',
+                    diag_tag_l3_1: '小ロット・',
+                    diag_tag_l3_2: '短納期対応',
+                    diag_tag_l4_1: 'スポーツ',
+                    diag_tag_l5_1: 'ユーザコンテン',
+                    diag_tag_l5_2: 'ツの製品化',
+                    diag_tag_l6_1: 'オリジナル商品',
+                    diag_tag_l6_2: 'の短納期量産',
+                    diag_tag_l7_1: 'テキスタイル',
+                    diag_tag_l8_1: '立体物加飾',
+                    diag_tag_r1_1: 'ロボティクス',
+                    diag_tag_r2_1: 'バイオ・',
+                    diag_tag_r2_2: 'マイクロアレイ',
+                    diag_tag_r3_1: '必要な場所に',
+                    diag_tag_r3_2: '必要な量だけ',
+                    diag_tag_r4_1: '電子基盤',
+                    diag_tag_r5_1: '製造工程の歩留',
+                    diag_tag_r5_2: '向上',
+                    diag_tag_r6_1: 'Gosanからの',
+                    diag_tag_r6_2: '採用',
+                    diag_tag_r7_1: '次世代半導体',
+                    diag_tag_r8_1: '量産化・コスト',
+                    diag_tag_r8_2: '低減',
+                    diag_tag_r9_1: '次世代',
+                    diag_tag_r9_2: '太陽電池',
+                    diag_tag_r10_1: '成膜・',
+                    diag_tag_r10_2: 'コーティング',
                     diag_banner_left: '印刷工程の課題',
                     diag_banner_right: '製造工程の課題',
                     tech_title: 'EPSONの技術',
@@ -914,25 +1078,59 @@
                     fnav_cases: 'Use Cases',
                     fnav_knowledge: 'Knowledge',
                     fnav_documents: 'Documents',
-                    map_title: 'Challenges Epson Can Solve',
-                    diag_arc_outer: 'Technology & Philosophy Foundation',
-                    diag_arc_mid: 'Accumulated IJS Technologies',
-                    diag_arc_inner: 'EF35 Frontier Technologies',
+                    map_title: 'Expanding Scope of Challenges Solved by Epson IJS',
+                    diag_arc_outer: 'Future Industrial Potential of IJS',
+                    diag_arc_mid: 'Challenges IJS Solves',
+                    diag_arc_inner: 'IJS Insights & Concrete Facts',
+                    diag_core_sub: 'Advanced IJS Tech',
                     diag_core_motto: 'Sho-Sho-Sei',
-                    diag_l1_1: 'Film Deposition',
-                    diag_l1_2: '& Coating',
-                    diag_l2_1: 'Signage &',
-                    diag_l2_2: 'Display',
-                    diag_l3_1: 'Textile',
-                    diag_l4_1: 'Label &',
-                    diag_l4_2: 'Packaging',
-                    diag_r1_1: 'Displays',
-                    diag_r2_1: 'Bio &',
-                    diag_r2_2: 'Microarray',
-                    diag_r3_1: 'Electronics',
-                    diag_r4_1: '3D Decoration',
-                    diag_r5_1: 'Next-Gen',
-                    diag_r5_2: 'Solar Cells',
+                    diag_cap_l1_1: 'Launching',
+                    diag_cap_l1_2: 'Original',
+                    diag_cap_l1_3: 'Brands',
+                    diag_cap_l2_1: 'Custom Gear',
+                    diag_cap_l2_2: 'for Every',
+                    diag_cap_l2_3: 'Sporting',
+                    diag_cap_l2_4: 'Lifestyle',
+                    diag_cap_l3_1: 'Never-Before-',
+                    diag_cap_l3_2: 'Seen Original',
+                    diag_cap_l3_3: 'Products',
+                    diag_cap_r1_1: 'Healthy Longevity',
+                    diag_cap_r1_2: '& Better QOL',
+                    diag_cap_r2_1: 'Evolution of',
+                    diag_cap_r2_2: 'Next-Gen Smart',
+                    diag_cap_r2_3: 'Gadgets',
+                    diag_cap_r3_1: 'Realizing Solar',
+                    diag_cap_r3_2: 'Mobility',
+                    diag_tag_l1_1: 'Label &',
+                    diag_tag_l1_2: 'Packaging',
+                    diag_tag_l2_1: 'Signage &',
+                    diag_tag_l2_2: 'Display',
+                    diag_tag_l3_1: 'Small-Lot &',
+                    diag_tag_l3_2: 'Fast Turnaround',
+                    diag_tag_l4_1: 'Sports',
+                    diag_tag_l5_1: 'Commercializing',
+                    diag_tag_l5_2: 'User Content',
+                    diag_tag_l6_1: 'Rapid Mass Prod.',
+                    diag_tag_l6_2: 'of Originals',
+                    diag_tag_l7_1: 'Textile',
+                    diag_tag_l8_1: '3D Decoration',
+                    diag_tag_r1_1: 'Robotics',
+                    diag_tag_r2_1: 'Bio &',
+                    diag_tag_r2_2: 'Microarray',
+                    diag_tag_r3_1: 'Right Amount,',
+                    diag_tag_r3_2: 'Right Place',
+                    diag_tag_r4_1: 'Electronics',
+                    diag_tag_r5_1: 'Higher Process',
+                    diag_tag_r5_2: 'Yield',
+                    diag_tag_r6_1: 'Adopted from',
+                    diag_tag_r6_2: 'Gosan',
+                    diag_tag_r7_1: 'Next-Gen Semis',
+                    diag_tag_r8_1: 'Mass Prod. &',
+                    diag_tag_r8_2: 'Cost Reduction',
+                    diag_tag_r9_1: 'Next-Gen',
+                    diag_tag_r9_2: 'Solar Cells',
+                    diag_tag_r10_1: 'Film Deposition',
+                    diag_tag_r10_2: '& Coating',
                     diag_banner_left: 'Printing Process Challenges',
                     diag_banner_right: 'Manufacturing Process Challenges',
                     tech_title: 'Epson Technology',
